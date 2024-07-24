@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--Not required dot this project-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Admin Panel</h1>
+    <form id="skills-form">
+        <input type="text" id="new-skill" placeholder="Enter a new skill">
+        <input type="text" id="skill-icon" placeholder="Enter icon class">
+        <input type="number" id="skill-level" placeholder="Enter skill level (in %)" min="0" max="100">
+        <button type="submit">Add skill</button>
+    </form>
+
+    <form id="projects-form">
+        <input type="text" id="project-title" placeholder="project Title" required>
+        <input type="url" id="project-image" placeholder="image URL" required>
+        <textarea id="project-description" placeholder="Project Description" required></textarea>
+        <input type="text" id="project-category" placeholder="college or work category" required>
+        <button type="submit">Add Project</button>
+    </form>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

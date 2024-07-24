@@ -1,0 +1,76 @@
+{
+    "technicalSkills": [
+        {
+            "name": "Full Stack Web Development",
+            "icon": "fas fa-code",
+            "level": 70
+        },
+        {
+            "name": "Microsoft Office",
+            "icon": "fas fa-laptop-code",
+            "level": 90
+        },
+        {
+            "name": "Database Management System",
+            "icon": "fas fa-database",
+            "level": 80
+        }
+    ],
+    "workplaceSkills": [
+        "Problem Solving",
+        "Team Work and Communication",
+        "Planning and Coordination",
+        "Good Listening"
+    ],
+    "projects": [
+        {
+            "title": "Full Stack Web Development / Cognizant Technology Soltions",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "work",
+            "url": "#"
+        },
+        {
+            "title": "Sparks Foundation",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "work",
+            "url": "https://github.com/chethanholla/Sparks_Foundation_Basic_Banking_sys"
+        },
+        {
+            "title": "Personal Portfolio Webpage",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/my_portfolio"
+        },
+        {
+            "title": "Gym Management System",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/Gym-Management-System"
+        },
+        {
+            "title": "Hotel Management System",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/Hotel-Management-System"
+        },
+        {
+            "title": "Wing Master (Flappy Bird game)",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/WingMaster"
+        },
+        {
+            "title": "Speed typer (Typing mini game)",
+            "image": "project.jpg",
+            "description": "Description of this Project.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/SpeedType"
+        }
+    ]
+}

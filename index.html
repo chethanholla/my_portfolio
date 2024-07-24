@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Chethan Holla BV</h1>
+            <p>Jr.Software Engineer</p>
+            <br>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!--Togglr dark mode-->
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!--About section-->
+    <section id="about" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>High-energy Student Volunteer currently finalizing Bachelor's of Engineering in Information Science and
+                prepared to contribute to organizational success while developing new skills and gaining real-world
+                experience. Highly organized, responsible and well-versed in Database Development and Web Development.
+                Positively impacts operations with top-notch communication and critical thinking skills.</p>
+        </div>
+    </section>
+
+    <!--Skills Section-->
+    <section id="skills" data-aos="flip-up" data-aos-duration="1500">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div id="technical-skills"></div>
+            <h2>Workplace Skills</h2>
+            <ul id="workplace-skills"></ul>
+        </div>
+    </section>
+
+    <!--Project Section-->
+    <section id="projects" data-aos="fade-in" data-aos-duration="1500">
+        <div class="container">
+            <div>
+                <h2>Professional Projects</h2>
+            </div>
+            <div id="work-projects"></div>
+            <br><br><br>
+            <div>
+                <h2>Personal Projects</h2>
+            </div>
+            <div id="college-projects"></div>
+        </div>
+    </section>
+
+    <!--Contact Form-->
+    <section id="contact" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chethan Holla BV. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/chethan-holla-b38077219/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/chethanholla" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top">&uarr;</button>
+
+    <script src="scripts5.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("e8rvn4hSdAerwHuYx");
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>
