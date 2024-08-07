@@ -125,3 +125,21 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+const navbar = document.getElementById('navigationBar');
+window.addEventListener('scroll', function () {
+    if (this.window.scrollY > 200) {
+        navbar.style.display = 'block';
+    } else {
+        navbar.style.display = 'none';
+    }
+});
