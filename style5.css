@@ -152,13 +152,13 @@ nav ul li a:hover {
 
 
 /* Navbar */
-.w3-top {
+.top {
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
-.w3-bar {
+.bar {
     background-color: #28262b;
     overflow: auto;
     display: flex;
@@ -166,7 +166,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.w3-bar .w3-bar-item {
+.bar .bar-item {
     padding: 8px 16px;
     /* float: left; */
     text-align: center;
@@ -176,12 +176,12 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.w3-bar .w3-bar-item:hover {
+.bar .bar-item:hover {
     background-color: #d5ccc7;
     color: #28262b;
 }
 
-.w3-bar .w3-button {
+.bar .button {
     border: none;
     display: block;
     outline: none;
@@ -193,46 +193,46 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-.w3-bar .w3-button:hover {
+.bar .button:hover {
     background-color: #d5ccc7;
     color: #28262b;
 }
 
-.w3-bar .w3-right-align {
+.bar .right-align {
     text-align: right !important;
     border: right !important;
     float: right !important
 }
 
-.w3-hide-small {
+.hide-small {
     display: block !important;
 }
 
-.w3-hide-medium,
-.w3-hide-large {
+.hide-medium,
+.hide-large {
     display: none !important;
 }
 
 /* Toggle Button */
-.w3-bar .w3-hover-black {
+.bar .hover-black {
     display: none !important;
 }
 
 @media screen and (max-width: 768px) {
-    .w3-bar .w3-bar-item.w3-hover-black {
+    .bar .bar-item.hover-black {
         display: block !important;
     }
 
-    .w3-bar .w3-hide-small {
+    .bar .hide-small {
         display: none !important;
     }
 
-    .w3-bar-block {
+    .bar-block {
         display: block;
     }
 }
 
-.w3-bar-block .w3-bar-item {
+.bar-block .bar-item {
     display: block;
     width: 100%;
     text-align: right;
@@ -243,7 +243,7 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-.w3-bar-block .w3-bar-item:hover {
+.bar-block .bar-item:hover {
     background-color: #d5ccc7;
     color: #28262b;
 }
@@ -253,7 +253,7 @@ nav ul li a:hover {
     display: none;
 }
 
-#navDemo.w3-show {
+#navDemo.show {
     display: block !important;
 }
 
