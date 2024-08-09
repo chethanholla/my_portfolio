@@ -30,7 +30,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: #1e1e1e;
+    background: url('BGI1.jpg') no-repeat center center/cover;
 }
 
 body.dark-mode nav ul li a {
@@ -42,8 +42,47 @@ body.dark-mode #about {
     color: #fff;
 }
 
-body.dark-mode .project {
+body.dark-mode #skills {
     background: #1e1e1e;
+
+}
+
+body.dark-mode #skills h2 {
+    color: #fff;
+
+}
+
+body.dark-mode #skills .skill {
+    background: #555;
+}
+
+body.dark-mode #skills .skill h3 {
+    color: #ffffff;
+}
+
+body.dark-mode #skills ul li {
+    background: #555;
+}
+
+body.dark-mode .progress-bar {
+    background: #777777;
+}
+
+body.dark-mode .progress {
+    background: #1e1e1e;
+}
+
+body.dark-mode #projects h2 {
+    color: #fff;
+}
+
+body.dark-mode #projects .project {
+    background: #555;
+    color: #fff;
+}
+
+body.dark-mode #projects .project .project-details h3,
+body.dark-mode #projects .project .project-details p {
     color: #fff;
 }
 
@@ -52,25 +91,13 @@ body.dark-mode .project {
     color: #eaeaea;
 }*/
 
-body.dark-mode .progress-bar {
-    background: #2e2e2e;
-}
 
-body.dark-mode .progress {
-    background: #555;
-}
 
 body.dark-mode .container h2 {
     color: #eaeaea
 }
 
-body.dark-mode #skills {
-    background: #1e1e1e;
-}
 
-body.dark-mode #skills ul li {
-    background: #555
-}
 
 body.dark-mode #contact {
     background: #1e1e1e;
@@ -79,7 +106,7 @@ body.dark-mode #contact {
 
 body.dark-mode #contact-form input,
 body.dark-mode #contact-form textarea {
-    background: #555;
+    background: #fff;
 }
 
 /* General Styles */
