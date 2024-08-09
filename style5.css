@@ -198,19 +198,8 @@ nav ul li a:hover {
     color: #28262b;
 }
 
-.bar .right-align {
-    text-align: right !important;
-    border: right !important;
-    float: right !important
-}
-
 .hide-small {
     display: block !important;
-}
-
-.hide-medium,
-.hide-large {
-    display: none !important;
 }
 
 /* Toggle Button */
