@@ -150,6 +150,25 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
+/* resume button */
+.resume-button {
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    width: 185px;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+
+.resume-button:hover {
+    background-color: #777777;
+    width: 190px;
+}
 
 /* Navbar */
 .top {
@@ -219,6 +238,10 @@ nav ul li a:hover {
     .bar-block {
         display: block;
     }
+
+    .resume {
+        display: none;
+    }
 }
 
 .bar-block .bar-item {
@@ -263,6 +286,15 @@ h2 {
 #about {
 
     color: #333;
+}
+
+.profile {
+    display: block;
+    /* margin: auto; */
+    margin: auto;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 325px;
 }
 
 /* Skills */
