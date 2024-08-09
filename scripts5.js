@@ -136,6 +136,7 @@ function toggleFunction() {
 }
 
 const navbar = document.getElementById('navigationBar');
+navbar.style.display = 'none';
 window.addEventListener('scroll', function () {
     if (this.window.scrollY > 200) {
         navbar.style.display = 'block';
