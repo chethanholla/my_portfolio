@@ -25,59 +25,138 @@
     "projects": [
         {
             "title": "Full Stack Web Development / Cognizant Technology Soltions",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "work",
             "url": "#"
         },
         {
             "title": "Sparks Foundation",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "work",
             "url": "https://github.com/chethanholla/Sparks_Foundation_Basic_Banking_sys"
         },
         {
             "title": "Template Portfolio Webpage",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/Template_portfolio_2"
         },
         {
             "title": "Personal Portfolio Webpage",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/my_portfolio"
         },
         {
             "title": "Gym Management System",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/Gym-Management-System"
         },
         {
             "title": "Hotel Management System",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/Hotel-Management-System"
         },
         {
             "title": "Wing Master (Flappy Bird game)",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/WingMaster"
         },
         {
             "title": "Speed typer (Typing mini game)",
-            "image": "project.jpg",
+            "image": "Assets/project.jpg",
             "description": "Description of this Project.",
             "category": "college",
             "url": "https://github.com/chethanholla/SpeedType"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Modern Java",
+            "issuer": "Udemy",
+            "date": "Aug 29, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/java 8.jpg"
+        },
+        {
+            "title": "Spring Boot 3, Spring 6 & Hibernate",
+            "issuer": "Udemy",
+            "date": "Aug 4, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/Spring.jpg"
+        },
+        {
+            "title": "The Complete SQL Bootcamp",
+            "issuer": "Udemy",
+            "date": "Aug 3, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/SQL1.jpg"
+        },
+        {
+            "title": "GCP Fundamentals for Beginners",
+            "issuer": "Udemy",
+            "date": "July 18, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/GCP.jpg"
+        },
+        {
+            "title": "AWS Essentials",
+            "issuer": "Udemy",
+            "date": "Dec 8, 2022",
+            "description": "Short description of the certificate",
+            "image": "Certificates/AWS Certificate_page-0001.jpg"
+        },
+        {
+            "title": "AWS Partner: Generative AI on AWS Essentials",
+            "issuer": "AWS Training and certification",
+            "date": "Feb 16, 2024",
+            "description": "Short description of the certificate",
+            "image": "Certificates/AWS Partner_page-0001.jpg"
+        },
+        {
+            "title": "Agile Fundamentals",
+            "issuer": "Udemy",
+            "date": "July 26, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/Agile fundamentals certificate_page-0001.jpg"
+        },
+        {
+            "title": "Master Agile Estimation",
+            "issuer": "Udemy",
+            "date": "July 27, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/Agile estimate certificate_page-0001.jpg"
+        },
+        {
+            "title": "Scrum Crash Course",
+            "issuer": "Udemy",
+            "date": "July 27, 2023",
+            "description": "Short description of the certificate",
+            "image": "Certificates/Scrum crash course sertificate_page-0001.jpg"
+        },
+        {
+            "title": "Artifical Intelligence and ChatGPT",
+            "issuer": "Udemy",
+            "date": "Jan 24, 2024",
+            "description": "Short description of the certificate",
+            "image": "Certificates/Generative Ai Fundamentals_page-0001.jpg"
+        },
+        {
+            "title": "ChatGPT: Complete chatGPT courses for work",
+            "issuer": "Udemy",
+            "date": "Jan 25, 2024",
+            "description": "Short description of the certificate",
+            "image": "Certificates/ChatGPT.jpg"
         }
     ]
 }

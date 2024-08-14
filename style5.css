@@ -132,7 +132,7 @@ body {
 
 header {
 
-    background: url('BGI1.jpg') no-repeat center center/cover;
+    background: url('Assets/BGI1.jpg') no-repeat center center/cover;
     /*background: linear-gradient(135deg, #ff7e5f, #feb47b);*/
     color: white;
     text-align: center;
@@ -527,6 +527,72 @@ h2 {
     }
 }
 
+/*certificates*/
+
+
+#certificates-section {
+    padding: 20px;
+    background-color: #a9a29c;
+}
+
+#certificates-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.certificate {
+    border: 1px solid #d5ccc7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #d5ccc7;
+    flex: 1 1 calc(50% - 40px);
+    /* Adjusted to take half the width minus the total gap */
+    max-width: calc(50% - 40px);
+    box-sizing: border-box;
+}
+
+.certificate h3 {
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 1.75em;
+}
+
+.certificate p {
+    text-align: center;
+    color: #333333;
+    font-size: 1em;
+    margin: 5px 0;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.certificate-size {
+    height: 300px;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .certificate {
+        flex: 1 1 100%;
+        /* Take up full width on smaller screens */
+        max-width: 100%;
+    }
+}
+
+
 /*Testimonials
 .testimonial {
     background: #f4f4f4;
@@ -548,8 +614,6 @@ h2 {
 
 /* Contact */
 #contact {
-    background: #a9a29c;
-
     /*background: linear-gradient(135deg, #6dd5ed, #2193b0);*/
     color: black;
 }
@@ -568,7 +632,7 @@ h2 {
 #contact-form textarea {
     padding: 10px;
     border: 1px solid #333333;
-    background: #d5ccc7;
+    background: #fff;
     border-radius: 5px;
 }
 
