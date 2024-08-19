@@ -1,3 +1,4 @@
+//Navigation bar Script
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -21,10 +22,31 @@ window.addEventListener('scroll', function () {
     });
 });
 
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") === -1) {
+        x.className += " show";
+    } else {
+        x.className = x.className.replace(" show", "");
+    }
+}
+
+const navbar = document.getElementById('navigationBar');
+navbar.style.display = 'none';
+window.addEventListener('scroll', function () {
+    if (this.window.scrollY > 200) {
+        navbar.style.display = 'block';
+    } else {
+        navbar.style.display = 'none';
+    }
+});
+//------------------------------------------------------------------------------------
+
 //Dark mode Toggle
 document.getElementById('dark-mode-toggle').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
 });
+//------------------------------------------------------------------------------------
 
 //Back to Top Button
 const backToTopButton = document.getElementById('back-to-top');
@@ -43,8 +65,9 @@ backToTopButton.addEventListener('click', function () {
         behavior: 'smooth'
     });
 });
+//------------------------------------------------------------------------------------
 
-//form submission
+//Contact-form submission
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -94,12 +117,15 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     alert('Form submitted!');
 
 });
+//------------------------------------------------------------------------------------
 
-
+//Script for adding Skills,Project and Certificate from JSON file
 document.addEventListener('DOMContentLoaded', function () {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
+
+            //Technical-skills
             const technicalSkills = document.getElementById('technical-skills');
             data.technicalSkills.forEach(skill => {
                 const skillDiv = document.createElement('div');
@@ -114,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 technicalSkills.appendChild(skillDiv);
             });
 
+            //WorkPlace Skills
             const workplaceSkills = document.getElementById('workplace-skills');
             data.workplaceSkills.forEach(skill => {
                 const listItem = document.createElement('li');
@@ -124,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 workplaceSkills.appendChild(listItem);
             });
 
+            //Projects
             const workProjects = document.getElementById('work-projects');
             const collegeProjects = document.getElementById('college-projects');
             data.projects.forEach(project => {
@@ -146,40 +174,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
+            //Certificates
             const certificatesContainer = document.getElementById('certificates-container');
             data.certificates.forEach(certificate => {
                 const certificateElement = document.createElement('div');
                 certificateElement.className = 'certificate';
                 certificateElement.innerHTML = `
-          <div data-aos="flip-up" data-aos-duration="1500">
-            <h3>${certificate.title}</h3>
-            <p><strong>Issuer:</strong> ${certificate.issuer}</p>
-            <p><strong>Date:</strong> ${certificate.date}</p>
-            <p>${certificate.description}</p>
-            <p><img class="certificate-size" src="${certificate.image}" alt="Certificate"></p>
-          </div>
-        `;
+                <div data-aos="flip-up" data-aos-duration="1500">
+                    <h3>${certificate.title}</h3>
+                    <p><strong>Issuer:</strong> ${certificate.issuer}</p>
+                    <p><strong>Date:</strong> ${certificate.date}</p>
+                    <p>${certificate.description}</p>
+                    <p><img class="certificate-size" src="${certificate.image}" alt="Certificate"></p>
+                </div>
+            `;
                 certificatesContainer.appendChild(certificateElement);
             });
         })
         .catch(error => console.error('Error fetching data:', error));
 });
-
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("show") === -1) {
-        x.className += " show";
-    } else {
-        x.className = x.className.replace(" show", "");
-    }
-}
-
-const navbar = document.getElementById('navigationBar');
-navbar.style.display = 'none';
-window.addEventListener('scroll', function () {
-    if (this.window.scrollY > 200) {
-        navbar.style.display = 'block';
-    } else {
-        navbar.style.display = 'none';
-    }
-});
+//------------------------------------------------------------------------------------

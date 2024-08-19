@@ -1,1 +1,53 @@
-This is my professional Portfolio
+# Project Portfolio
+
+This is a personal portfolio website showcasing my technical skills, workplace skills, projects, and certifications. It features smooth scrolling, animations, dark mode toggle, a contact form with client-side validation.
+
+## Features
+
+1. **Smooth Scrolling:** Smooth navigation between different sections of the portfolio.
+2. **Animations:** Elements animate into view as you scroll down the page.
+3. **Dark Mode Toggle:** Switch between light and dark mode for a better viewing experience.
+4. **Back to Top Button:** Quickly scroll back to the top of the page.
+5. **Contact Form:** A contact form with client-side validation.
+6. **Responsive Design:** Optimized for viewing on various devices.
+
+## Sections
+
+- **Home:** Introduction and welcome message.
+- **About:** Brief information about myself.
+- **Skills:** Showcasing my technical and workplace skills.
+- **Projects:** List of work and college projects with descriptions and links.
+- **Certificates:** List of certifications with details and images.
+- **Contact:** Contact form to reach out to me.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Font Awesome (for icons)
+- AOS (Animate On Scroll) Library
+- EmailJS (for contact form functionality)
+
+## Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+
+2. **Navigate to the project directory**
+   ```bash
+   cd portfolio
+
+3. **Open the index.html file in your web browser:**
+   ```bash
+   open index.html
+
+## Credits
+- Icons by Font Awesome
+- Animations by AOS Library
+- Email service by EmailJS
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](License) file for details.
