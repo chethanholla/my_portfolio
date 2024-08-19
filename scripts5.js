@@ -52,7 +52,30 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    if (name && email && message) {
+    const formMessages = document.getElementById('form-messages');
+
+    // Reset form messages
+    formMessages.innerHTML = '';
+
+    // Basic validation checks
+    let isValid = true;
+    if (name.length < 2) {
+        isValid = false;
+        formMessages.innerHTML += '<p>Please enter at least 2 characters for the name.</p>';
+    }
+
+    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        isValid = false;
+        formMessages.innerHTML += '<p>Please enter a valid email address.</p>';
+    }
+
+    if (message.length < 10) {
+        isValid = false;
+        formMessages.innerHTML += '<p>Please enter at least 10 characters for the message.</p>';
+    }
+
+    // If form is valid, proceed with email sending
+    if (isValid) {
         emailjs.send('service_bbwa9ry', 'template_45vksdt', {
             from_name: name,
             from_email: email,

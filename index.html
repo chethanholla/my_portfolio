@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My project portfolio showcasing my skills, projects, and achievements.">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style5.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -21,7 +22,6 @@
                 <a href="#projects" class="bar-item button hide-small">PROJECTS</a>
                 <a href="#certificates-section" class="bar-item button hide-small">CERTIFICATES</a>
                 <a href="#contact" class="bar-item button hide-small">CONTACT</a>
-
             </div>
             <a class="bar-item button resume" href="Resume/resume.pdf" target="_blank">RESUME</a>
             <a class="bar-item button hover-black" href="javascript:void(0);" onclick="toggleFunction()"
@@ -111,11 +111,15 @@
             <h2>Contact</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required minlength="2"
+                    title="Please enter at least 2 characters.">
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required title="Please enter a valid email address.">
+
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required minlength="10"
+                    title="Please enter at least 10 characters."></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
