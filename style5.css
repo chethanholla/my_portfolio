@@ -144,6 +144,8 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -634,6 +636,12 @@ h2 {
     margin-bottom: 10px;
 }
 
+.certificate .description-txt-align p {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .certificate-size {
     height: 300px;
     width: 400px;
@@ -648,6 +656,17 @@ h2 {
     .certificate {
         flex: 1 1 100%;
         /* Take up full width on smaller screens */
+        max-width: 100%;
+
+    }
+
+    .certificate .description-txt-align p {
+        text-align: left;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .certificate-size {
         max-width: 100%;
     }
 }

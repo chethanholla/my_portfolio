@@ -97,77 +97,77 @@
             "title": "Modern Java",
             "issuer": "Udemy",
             "date": "Aug 29, 2023",
-            "description": "Short description of the certificate",
+            "description": "In-depth course covering modern Java features, including streams, lambda expressions, and the Java module system.",
             "image": "Certificates/Java 8.jpg"
         },
         {
             "title": "Spring Boot 3, Spring 6 & Hibernate",
             "issuer": "Udemy",
             "date": "Aug 4, 2023",
-            "description": "Short description of the certificate",
+            "description": "Comprehensive training on building robust applications using Spring Boot 3, Spring 6, and Hibernate ORM.",
             "image": "Certificates/Spring.jpg"
         },
         {
             "title": "The Complete SQL Bootcamp",
             "issuer": "Udemy",
             "date": "Aug 3, 2023",
-            "description": "Short description of the certificate",
+            "description": "Extensive SQL course focusing on database design, querying, and management with hands-on exercises.",
             "image": "Certificates/SQL1.jpg"
         },
         {
             "title": "GCP Fundamentals for Beginners",
             "issuer": "Udemy",
             "date": "July 18, 2023",
-            "description": "Short description of the certificate",
+            "description": "Introduction to Google Cloud Platform, covering core services, infrastructure, and management tools.",
             "image": "Certificates/GCP.jpg"
         },
         {
             "title": "AWS Essentials",
             "issuer": "Udemy",
             "date": "Dec 8, 2022",
-            "description": "Short description of the certificate",
+            "description": "Fundamental course on Amazon Web Services, explaining key concepts and essential services for cloud computing.",
             "image": "Certificates/AWS Certificate_page-0001.jpg"
         },
         {
             "title": "AWS Partner: Generative AI on AWS Essentials",
             "issuer": "AWS Training and certification",
             "date": "Feb 16, 2024",
-            "description": "Short description of the certificate",
+            "description": "Deploy Scalable, Reliable, and Secure Generative AI Applications Using Amazon Web Services",
             "image": "Certificates/AWS Partner_page-0001.jpg"
         },
         {
             "title": "Agile Fundamentals",
             "issuer": "Udemy",
             "date": "July 26, 2023",
-            "description": "Short description of the certificate",
+            "description": "Introduction to Agile methodologies, including Scrum and Kanban, emphasizing iterative development and team collaboration.",
             "image": "Certificates/Agile fundamentals certificate_page-0001.jpg"
         },
         {
             "title": "Master Agile Estimation",
             "issuer": "Udemy",
             "date": "July 27, 2023",
-            "description": "Short description of the certificate",
+            "description": "Detailed course on Agile estimation techniques, such as story points and planning poker, to improve project planning.",
             "image": "Certificates/Agile estimate certificate_page-0001.jpg"
         },
         {
             "title": "Scrum Crash Course",
             "issuer": "Udemy",
             "date": "July 27, 2023",
-            "description": "Short description of the certificate",
+            "description": "Intensive crash course on Scrum framework, covering roles, events, and artifacts for effective Agile project management.",
             "image": "Certificates/Scrum crash course sertificate_page-0001.jpg"
         },
         {
             "title": "Artifical Intelligence and ChatGPT",
             "issuer": "Udemy",
             "date": "Jan 24, 2024",
-            "description": "Short description of the certificate",
+            "description": "Comprehensive introduction to AI concepts, focusing on ChatGPT and its applications in natural language processing.",
             "image": "Certificates/Generative Ai Fundamentals_page-0001.jpg"
         },
         {
             "title": "ChatGPT: Complete chatGPT courses for work",
             "issuer": "Udemy",
             "date": "Jan 25, 2024",
-            "description": "Short description of the certificate",
+            "description": "Practical guide to using ChatGPT in professional settings, covering integration, customization, and deployment.",
             "image": "Certificates/ChatGPT.jpg"
         }
     ]

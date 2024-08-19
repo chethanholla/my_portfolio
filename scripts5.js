@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <h3>${certificate.title}</h3>
                     <p><strong>Issuer:</strong> ${certificate.issuer}</p>
                     <p><strong>Date:</strong> ${certificate.date}</p>
-                    <p>${certificate.description}</p>
+                    <div class="description-txt-align"><p>${certificate.description}</p></div>
                     <p><img class="certificate-size" src="${certificate.image}" alt="Certificate"></p>
                 </div>
             `;
