@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 skillDiv.setAttribute('data-aos', 'flip-left');
                 skillDiv.setAttribute('data-aos-duration', '1500');
                 skillDiv.innerHTML = `
-                    <h3><i class="${skill.icon}"></i> ${skill.name}</h3>
+                    <h3><i id="logo" class="${skill.icon}"></i> ${skill.name}</h3>
                     <div class="progress-bar">
                         <div class="progress" style="width: ${skill.level}%;"></div>
                     </div>`;
@@ -154,18 +154,25 @@ document.addEventListener('DOMContentLoaded', function () {
             //Projects
             const workProjects = document.getElementById('work-projects');
             const collegeProjects = document.getElementById('college-projects');
+
             data.projects.forEach(project => {
                 const projectDiv = document.createElement('div');
                 projectDiv.classList.add('project', 'animate');
                 projectDiv.setAttribute('data-aos', 'fade-in');
                 projectDiv.setAttribute('data-aos-duration', '1500');
-                projectDiv.innerHTML = `
+
+                let projectContent = `
                     <img src="${project.image}" alt="${project.title}">
                     <div class="project-details">
                         <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <a href="${project.url}" target="_blank">View Project</a>
-                    </div>`;
+                        <p>${project.description}</p>`;
+
+                if (project.url !== "#") {
+                    projectContent += `<a href="${project.url}" target="_blank">View Project</a>`;
+                }
+
+                projectContent += `</div>`;
+                projectDiv.innerHTML = projectContent;
 
                 if (project.category === 'work') {
                     workProjects.appendChild(projectDiv);

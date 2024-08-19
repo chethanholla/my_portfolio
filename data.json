@@ -1,17 +1,22 @@
 {
     "technicalSkills": [
         {
-            "name": "Full Stack Web Development",
+            "name": "C/C++, OOPS ,Python ",
             "icon": "fas fa-code",
             "level": 70
         },
         {
-            "name": "Microsoft Office",
+            "name": "Full Stack Web Development - Java, HTML5, CSS5, JS5 , SpringBoot, Angular",
+            "icon": "fas fa-code",
+            "level": 80
+        },
+        {
+            "name": "Microsoft Office - Exccel, Powerpoint, Word",
             "icon": "fas fa-laptop-code",
             "level": 90
         },
         {
-            "name": "Database Management System",
+            "name": "Database Management System - MySql",
             "icon": "fas fa-database",
             "level": 80
         }
@@ -26,56 +31,63 @@
         {
             "title": "Full Stack Web Development / Cognizant Technology Soltions",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "Cannot disclose the details of the project.",
             "category": "work",
             "url": "#"
         },
         {
             "title": "Sparks Foundation",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "It is an Internship Project sbout Basic Banking System for making transactions between users. It can transfer Money between multiple accounts, view all Customer's data and view all the past transactions happened between different Users.",
             "category": "work",
             "url": "https://github.com/chethanholla/Sparks_Foundation_Basic_Banking_sys"
         },
         {
-            "title": "Template Portfolio Webpage",
-            "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
-            "category": "college",
-            "url": "https://github.com/chethanholla/Template_portfolio_2"
-        },
-        {
             "title": "Personal Portfolio Webpage",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "This is a personal portfolio website showcasing my technical skills, workplace skills, projects, and certifications. It features smooth scrolling, animations, dark mode toggle, a contact form with client-side validation.",
             "category": "college",
             "url": "https://github.com/chethanholla/my_portfolio"
         },
         {
+            "title": "Template Portfolio Webpage",
+            "image": "Assets/project.jpg",
+            "description": "This is a Template portfolio includes information about technical skills, workplace skills, projects, and certifications. It provides a detailed overview of professional background and accomplishments.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/Template_portfolio_2"
+        },
+        {
+            "title": "Driver Drowsiness Detection System using CNN",
+            "image": "Assets/project.jpg",
+            "description": "The proposed system works based on  Machine Learning  and it deals with implementation of an automated system which helps us to detect the driver drowsiness using Digital Image Processing technique.",
+            "category": "college",
+            "url": "https://github.com/chethanholla/Driver-Drowsiness-Detection"
+        },
+        {
             "title": "Gym Management System",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "An efficient Web Application for maintaining. Application includes: Building prototype, Creating Queries using SQL, Connecting to Database, Storing and Retrieving data from Database, HTML, CSS and PHP.",
             "category": "college",
             "url": "https://github.com/chethanholla/Gym-Management-System"
         },
         {
             "title": "Hotel Management System",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "An efficient Application for maintaining the records of the Hotel. Application includes: Building prototype, Storing Data using File Handling, C++.",
             "category": "college",
             "url": "https://github.com/chethanholla/Hotel-Management-System"
         },
         {
             "title": "Wing Master (Flappy Bird game)",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "This little project is an attempt to learn more about coding in Android Studio.",
             "category": "college",
             "url": "https://github.com/chethanholla/WingMaster"
         },
         {
             "title": "Speed typer (Typing mini game)",
             "image": "Assets/project.jpg",
-            "description": "Description of this Project.",
+            "description": "This little project is an attempt to learn more about coding in HTML, CSS and JavaScript.",
             "category": "college",
             "url": "https://github.com/chethanholla/SpeedType"
         }

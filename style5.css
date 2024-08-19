@@ -311,20 +311,75 @@ h2 {
 }
 
 /*about*/
-#about {
-
+#about .container .para-container {
     color: #333;
+    padding: 20px;
+    border: 1px solid #a9a29c;
+    border-radius: 5px;
 }
 
+/*Education*/
+.education-section {
+    margin-top: 20px;
+}
+
+.education-section h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #a9a29c;
+    border-radius: 8px;
+}
+
+.education-item h4 {
+    margin: 0;
+}
+
+.education-item p {
+    margin: 5px 0;
+}
+
+/*Work Experience*/
+.work-ex-section {
+    margin-top: 20px;
+}
+
+.work-ex-section h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.work-ex-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #a9a29c;
+    border-radius: 8px;
+}
+
+.work-ex-item h4 {
+    margin: 0;
+}
+
+.work-ex-item p {
+    margin: 5px 0;
+}
+
+/*Profile Picture in about*/
 .profile {
     display: block;
-    /* margin: auto; */
     margin: auto;
     margin-bottom: 25px;
     width: 300px;
     height: 325px;
 }
 
+/*----------------------------------------------------------------------------------------------*/
 /* Skills */
 /* General styles for skills section */
 #skills {
@@ -354,6 +409,10 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill #logo {
+    padding: 12px;
 }
 
 .skill h3 {
