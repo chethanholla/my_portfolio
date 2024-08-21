@@ -21,20 +21,35 @@
 
 body.dark-mode {
     background: #121212;
-    color: #eaeaea;
+    color: #ddd;
+}
+
+body.dark-mode .bar .bar-item {
+    color: #ddd;
 }
 
 body.dark-mode header {
-    background: url('BGI1.jpg') no-repeat center center/cover;
+    background: url('Assets/BGI1.jpg') no-repeat center center/cover;
+    /*background-attachment: fixed;*/
 }
 
 body.dark-mode nav ul li a {
-    color: #eaeaea;
+    color: #ddd;
 
 }
 
 body.dark-mode #about {
-    color: #fff;
+    color: #ddd;
+}
+
+body.dark-mode #about .container .para-container {
+    color: #ddd;
+    background: #1e1e1e;
+}
+
+body.dark-mode #about .education-item,
+body.dark-mode #about .work-ex-item {
+    background: #1e1e1e;
 }
 
 body.dark-mode #skills {
@@ -43,7 +58,7 @@ body.dark-mode #skills {
 }
 
 body.dark-mode #skills h2 {
-    color: #fff;
+    color: #ddd;
 
 }
 
@@ -52,7 +67,7 @@ body.dark-mode #skills .skill {
 }
 
 body.dark-mode #skills .skill h3 {
-    color: #ffffff;
+    color: #ddd;
 }
 
 body.dark-mode #skills ul li {
@@ -68,31 +83,51 @@ body.dark-mode .progress {
 }
 
 body.dark-mode #projects h2 {
-    color: #fff;
+    color: #ddd;
 }
 
 body.dark-mode #projects .project {
     background: #555;
-    color: #fff;
+    color: #ddd;
 }
 
 body.dark-mode #projects .project .project-details h3,
 body.dark-mode #projects .project .project-details p {
-    color: #fff;
+    color: #ddd;
 }
 
 body.dark-mode .container h2 {
-    color: #eaeaea
+    color: #ddd
+}
+
+body.dark-mode #certificates-section {
+    background: #1e1e1e;
+}
+
+body.dark-mode #certificates-section h2 {
+    color: #ddd;
+}
+
+body.dark-mode .certificate {
+    color: #ddd;
+    background-color: #555;
+    border: 1px solid #555
+}
+
+body.dark-mode .certificate h3,
+body.dark-mode .certificate p,
+body.dark-mode .certificate .description-txt-align p {
+    color: #ddd;
 }
 
 body.dark-mode #contact {
     background: #1e1e1e;
-    color: #fff;
+    color: #ddd;
 }
 
 body.dark-mode #contact-form input,
 body.dark-mode #contact-form textarea {
-    background: #fff;
+    background: #ddd;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -128,7 +163,8 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
+    /*to make image have parallax effect*/
 }
 
 header h1 {
@@ -312,6 +348,7 @@ h2 {
     margin-bottom: 10px;
 }
 
+/*#d5ccc7*/
 .education-item {
     margin-bottom: 20px;
     padding: 10px;
