@@ -1,8 +1,3 @@
-/*333333
-d5ccc7
-a9a29c
-28262b*/
-
 /* Reset */
 * {
     overflow-x: hidden;
@@ -86,18 +81,9 @@ body.dark-mode #projects .project .project-details p {
     color: #fff;
 }
 
-/*body.dark-mode .model-content {
-    background: #1e1e1e;
-    color: #eaeaea;
-}*/
-
-
-
 body.dark-mode .container h2 {
     color: #eaeaea
 }
-
-
 
 body.dark-mode #contact {
     background: #1e1e1e;
@@ -109,6 +95,7 @@ body.dark-mode #contact-form textarea {
     background: #fff;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -128,23 +115,19 @@ body {
     overflow: hidden;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Header Styles */
-
 header {
-
     background: url('Assets/BGI1.jpg') no-repeat center center/cover;
-    /*background: linear-gradient(135deg, #ff7e5f, #feb47b);*/
     color: white;
     text-align: center;
     padding: 50px 0;
     position: relative;
     top: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     background-attachment: fixed;
 }
 
@@ -164,7 +147,6 @@ nav ul {
 }
 
 nav ul li {
-    /*background: #333;*/
     display: inline;
     margin: 0 10px;
 }
@@ -179,7 +161,7 @@ nav ul li a:hover {
     color: #f4f4f4;
 }
 
-
+/*--------------------------------------------------------------------------------------------------------*/
 /* resume button */
 .resume-button {
     text-align: center;
@@ -200,6 +182,7 @@ nav ul li a:hover {
     width: 190px;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Navbar */
 .top {
     position: fixed;
@@ -217,7 +200,6 @@ nav ul li a:hover {
 
 .bar .bar-item {
     padding: 8px 16px;
-    /* float: left; */
     text-align: center;
     text-decoration: none;
     font-size: 17px;
@@ -234,10 +216,7 @@ nav ul li a:hover {
     border: none;
     display: block;
     outline: none;
-    /* text-align: justify; */
     cursor: pointer;
-    /* white-space: normal; */
-    /* float: none; */
     font-size: 16px;
     text-decoration: none;
 }
@@ -251,7 +230,6 @@ nav ul li a:hover {
     display: block !important;
 }
 
-/* Toggle Button */
 .bar .hover-black {
     display: none !important;
 }
@@ -290,6 +268,7 @@ nav ul li a:hover {
     color: #28262b;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Navbar on small screens */
 #navDemo {
     display: none;
@@ -299,10 +278,10 @@ nav ul li a:hover {
     display: block !important;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Section Styles */
 section {
     padding: 50px 0;
-    /*border-bottom: 1px solid #eaeaea;*/
 }
 
 h2 {
@@ -312,12 +291,14 @@ h2 {
     text-align: center;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /*about*/
 #about .container .para-container {
     color: #333;
     padding: 20px;
     border: 1px solid #a9a29c;
     border-radius: 5px;
+
 }
 
 /*Education*/
@@ -484,8 +465,7 @@ h2 {
     }
 }
 
-
-
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* Projects */
 /* General styles for project section */
@@ -589,9 +569,8 @@ h2 {
     }
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /*certificates*/
-
-
 #certificates-section {
     padding: 20px;
     background-color: #a9a29c;
@@ -616,7 +595,6 @@ h2 {
     border-radius: 5px;
     background-color: #d5ccc7;
     flex: 1 1 calc(50% - 40px);
-    /* Adjusted to take half the width minus the total gap */
     max-width: calc(50% - 40px);
     box-sizing: border-box;
 }
@@ -655,7 +633,6 @@ h2 {
 @media (max-width: 768px) {
     .certificate {
         flex: 1 1 100%;
-        /* Take up full width on smaller screens */
         max-width: 100%;
 
     }
@@ -671,29 +648,9 @@ h2 {
     }
 }
 
-
-/*Testimonials
-.testimonial {
-    background: #f4f4f4;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-.testimonial h4 {
-    margin-bottom: 5px;
-    font-size: 1.2em;
-}*/
-
+/*--------------------------------------------------------------------------------------------------------*/
 /* Contact */
 #contact {
-    /*background: linear-gradient(135deg, #6dd5ed, #2193b0);*/
     color: black;
 }
 
@@ -729,6 +686,7 @@ h2 {
     background: #666666;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Footer */
 footer {
     background: #28262b;
@@ -748,26 +706,7 @@ footer .socials a:hover {
     color: #d5ccc7;
 }
 
-/*
-footer p {
-    margin-bottom: 10px;
-}
-
-footer .socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-footer .socials a {
-    color: #fff;
-    font-size: 1.5em;
-}
-
-footer .socials a:hover {
-    color: #bbb;
-}*/
-
+/*--------------------------------------------------------------------------------------------------------*/
 /* Add animations */
 .animate {
     opacity: 0;
@@ -780,6 +719,7 @@ footer .socials a:hover {
     transform: translateY(0);
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /*Back to Top Button*/
 #back-to-top {
     position: fixed;
@@ -800,6 +740,7 @@ footer .socials a:hover {
     background: #555;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
 /* Responsive Design */
 @media(max-width: 768px) {
     header h1 {
