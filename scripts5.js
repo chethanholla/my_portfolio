@@ -151,53 +151,256 @@ document.addEventListener('DOMContentLoaded', function () {
                 workplaceSkills.appendChild(listItem);
             });
 
-            //Projects
-            const workProjects = document.getElementById('work-projects');
-            const collegeProjects = document.getElementById('college-projects');
+            // //Projects
+            // const workProjects = document.getElementById('work-projects');
+            // const collegeProjects = document.getElementById('college-projects');
 
-            data.projects.forEach(project => {
-                const projectDiv = document.createElement('div');
-                projectDiv.classList.add('project', 'animate');
-                projectDiv.setAttribute('data-aos', 'fade-in');
-                projectDiv.setAttribute('data-aos-duration', '1500');
+            // data.projects.forEach(project => {
+            //     const projectDiv = document.createElement('div');
+            //     projectDiv.classList.add('project', 'animate');
+            //     projectDiv.setAttribute('data-aos', 'fade-in');
+            //     projectDiv.setAttribute('data-aos-duration', '1500');
 
-                let projectContent = `
-                    <img src="${project.image}" alt="${project.title}">
-                    <div class="project-details">
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>`;
+            //     let projectContent = `
+            //         <img src="${project.image}" alt="${project.title}">
+            //         <div class="project-details">
+            //             <h3>${project.title}</h3>
+            //             <p>${project.description}</p>`;
 
-                if (project.url !== "#") {
-                    projectContent += `<a href="${project.url}" target="_blank">View Project</a>`;
-                }
+            //     if (project.url !== "#") {
+            //         projectContent += `<a href="${project.url}" target="_blank">View Project</a>`;
+            //     }
 
-                projectContent += `</div>`;
-                projectDiv.innerHTML = projectContent;
+            //     projectContent += `</div>`;
+            //     projectDiv.innerHTML = projectContent;
 
-                if (project.category === 'work') {
-                    workProjects.appendChild(projectDiv);
-                } else if (project.category === 'college') {
-                    collegeProjects.appendChild(projectDiv);
-                }
-            });
+            //     if (project.category === 'work') {
+            //         workProjects.appendChild(projectDiv);
+            //     } else if (project.category === 'college') {
+            //         collegeProjects.appendChild(projectDiv);
+            //     }
+            // });
 
             //Certificates
-            const certificatesContainer = document.getElementById('certificates-container');
-            data.certificates.forEach(certificate => {
-                const certificateElement = document.createElement('div');
-                certificateElement.className = 'certificate';
-                certificateElement.innerHTML = `
-                <div data-aos="flip-up" data-aos-duration="1500">
-                    <h3>${certificate.title}</h3>
-                    <p><strong>Issuer:</strong> ${certificate.issuer}</p>
-                    <p><strong>Date:</strong> ${certificate.date}</p>
-                    <div class="description-txt-align"><p>${certificate.description}</p></div>
-                    <p><img class="certificate-size" src="${certificate.image}" alt="Certificate"></p>
-                </div>
-            `;
-                certificatesContainer.appendChild(certificateElement);
-            });
+            // const certificatesContainer = document.getElementById('certificates-container');
+            // data.certificates.forEach(certificate => {
+            //     const certificateElement = document.createElement('div');
+            //     certificateElement.className = 'certificate';
+            //     certificateElement.innerHTML = `
+            //     <div data-aos="flip-up" data-aos-duration="1500">
+            //         <h3>${certificate.title}</h3>
+            //         <p><strong>Issuer:</strong> ${certificate.issuer}</p>
+            //         <p><strong>Date:</strong> ${certificate.date}</p>
+            //         <div class="description-txt-align"><p>${certificate.description}</p></div>
+            //         <p><img class="certificate-size" src="${certificate.image}" alt="Certificate"></p>
+            //     </div>
+            // `;
+            //     certificatesContainer.appendChild(certificateElement);
+            // });
         })
         .catch(error => console.error('Error fetching data:', error));
 });
 //------------------------------------------------------------------------------------
+
+//Dynamically adding Projects
+let currentPage = 1;
+const projectsPerPage = 5;
+let currentCategory = '';
+let filteredProjects = [];
+
+function showCategory(category) {
+    currentCategory = category;
+    currentPage = 1;
+    updateHeading();
+    loadProjects();
+}
+
+function updateHeading() {
+    const heading = document.getElementById('category-heading');
+    if (currentCategory === 'work') {
+        heading.textContent = 'Professional Projects';
+    } else if (currentCategory === 'college') {
+        heading.textContent = 'Personal Projects';
+    }
+}
+
+function loadProjects() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            filteredProjects = data.projects.filter(project => project.category === currentCategory);
+            displayProjects();
+        });
+}
+
+function displayProjects() {
+    const projectContainer = document.getElementById('project-container');
+    projectContainer.innerHTML = '';
+
+    const start = (currentPage - 1) * projectsPerPage;
+    const end = start + projectsPerPage;
+    const projectsToShow = filteredProjects.slice(start, end);
+
+    projectsToShow.forEach(project => {
+        const projectDiv = document.createElement('div');
+        projectDiv.classList.add('project');
+        projectDiv.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <div class="project-details">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <a href="${project.url}" target="_blank" ${project.url === "#" ? "style='display:none'" : ""}>View Project</a>
+            </div>`;
+        projectContainer.appendChild(projectDiv);
+    });
+
+    updatePaginationControls();
+    document.getElementById('pagination').style.display = filteredProjects.length > projectsPerPage ? 'flex' : 'none';
+}
+
+function updatePaginationControls() {
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    const pageNumberDisplay = document.getElementById('pageNumber');
+
+    const start = (currentPage - 1) * projectsPerPage;
+    const end = start + projectsPerPage;
+
+    const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+
+    prevButton.style.display = currentPage === 1 ? 'none' : 'inline-block';
+    nextButton.style.display = end >= filteredProjects.length ? 'none' : 'inline-block';
+
+    if (filteredProjects.length > 0) {
+        pageNumberDisplay.textContent = `${currentPage} of ${totalPages}`;
+    } else {
+        pageNumberDisplay.textContent = '';
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayProjects();
+    }
+}
+
+function nextPage() {
+    if ((currentPage * projectsPerPage) < filteredProjects.length) {
+        currentPage++;
+        displayProjects();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const projectContainer = document.getElementById('project-container');
+    document.getElementById('pagination').style.display = 'none'; // Hide pagination initially
+});
+//--------------------------------------------------------------------------------------------
+//Dynamically adding Certificates
+let currentCertificateIndex = 0;
+let certificates = [];
+
+function loadCertificates() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            certificates = data.certificates;
+            displayCertificate();
+            createDots();
+        });
+}
+
+function displayCertificate() {
+    const certificate = certificates[currentCertificateIndex];
+    const certificateContent = document.getElementById('certificate-content');
+
+    certificateContent.style.opacity = 0; // Start by hiding the certificate
+    certificateContent.style.transform = 'translateX(0)'; // Reset position
+    setTimeout(() => {
+        certificateContent.innerHTML = `
+            <img id="certificate-image" src="${certificate.image}" alt="${certificate.title}">
+            <h3>${certificate.title}</h3>
+            <p><strong>Issuer:</strong> ${certificate.issuer}</p>
+            <p><strong>Date:</strong> ${certificate.date}</p>
+            <p>${certificate.description}</p>
+        `;
+        certificateContent.style.opacity = 1; // Fade in the new certificate
+
+        // Add click event listener for enlarging the image
+        const certificateImage = document.getElementById('certificate-image');
+        certificateImage.addEventListener('click', () => {
+            const certificatesSection = document.getElementById('certificates-section');
+            certificatesSection.classList.toggle('enlarged');
+        });
+
+    }, 100); // Delay matches the transition duration
+    updateDots();
+}
+
+function createDots() {
+    const dotsContainer = document.getElementById('dots-container');
+    dotsContainer.innerHTML = ''; // Clear any existing dots
+
+    for (let i = 0; i < certificates.length; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.setAttribute('data-index', i);
+        dot.onclick = function () {
+            currentCertificateIndex = i;
+            displayCertificate();
+        };
+        dotsContainer.appendChild(dot);
+    }
+    updateDots();
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        if (index === currentCertificateIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function prevCertificate() {
+    animateCertificateOut('left'); // Slide out to the left
+
+    if (certificates.length === 0) return;
+    currentCertificateIndex = (currentCertificateIndex === 0) ? certificates.length - 1 : currentCertificateIndex - 1;
+    setTimeout(() => {
+        animateCertificateIn('left'); // Slide in from the left
+        displayCertificate();
+    }, 500); // Match delay with the transition
+}
+
+function nextCertificate() {
+    animateCertificateOut('right'); // Slide out to the right
+
+    if (certificates.length === 0) return;
+    currentCertificateIndex = (currentCertificateIndex === certificates.length - 1) ? 0 : currentCertificateIndex + 1;
+    setTimeout(() => {
+        animateCertificateIn('right'); // Slide in from the right
+        displayCertificate();
+    }, 500); // Match delay with the transition
+}
+
+function animateCertificateOut(direction) {
+    const certificateContent = document.getElementById('certificate-content');
+    certificateContent.style.transform = direction === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
+    certificateContent.style.opacity = 0;
+}
+
+function animateCertificateIn(direction) {
+    const certificateContent = document.getElementById('certificate-content');
+    certificateContent.style.transform = direction === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+    setTimeout(() => {
+        certificateContent.style.transform = 'translateX(0)';
+        certificateContent.style.opacity = 1;
+    }, 10); // Quick reset for smooth transition
+}
+
+document.addEventListener('DOMContentLoaded', loadCertificates);

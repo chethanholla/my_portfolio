@@ -132,7 +132,7 @@
         </div>
     </section>
 
-    <!--Project Section-->
+    <!-- Project Section
     <section id="projects" data-aos="fade-in" data-aos-duration="1500">
         <div class="container">
             <div>
@@ -145,12 +145,39 @@
             </div>
             <div id="college-projects"></div>
         </div>
+    </section> -->
+
+    <section id="projects" data-aos="fade-in" data-aos-duration="1500">
+        <h2 id="category-heading">Projects</h2>
+        <div id="category-selection">
+            <button id="workCategory" onclick="showCategory('work')">Professional Projects</button>
+            <button id="collegeCategory" onclick="showCategory('college')">Personal Projects</button>
+        </div>
+
+        <div class="container">
+            <div id="project-container"></div>
+        </div>
+
+        <div id="pagination">
+            <a href="#projects"><button id="prevPage" onclick="prevPage()">Previous</button></a>
+            <span id="pageNumber">1</span>
+            <a href="#projects"><button id="nextPage" onclick="nextPage()">Next</button></a>
+        </div>
     </section>
 
     <!--Certificate section-->
     <section id="certificates-section" data-aos="fade-in" data-aos-duration="1500">
         <h2>Certificates</h2>
-        <div id="certificates-container"></div>
+        <div class="certificate-container">
+            <button id="pervCertificate" onclick="prevCertificate()">
+                <p>&#8249;</p>
+            </button>
+            <div id="certificate-content"></div>
+            <button id="nextCertificate" onclick="nextCertificate()">
+                <p>&#8250;</p>
+            </button>
+        </div>
+        <div id="dots-container" class="dots-container"></div>
     </section>
 
     <!--Contact Form-->

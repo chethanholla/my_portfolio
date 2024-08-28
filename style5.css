@@ -514,7 +514,7 @@ h2 {
     text-align: center;
     color: #333;
     font-size: 2.5em;
-    margin-bottom: 40px;
+    /* margin-bottom: 10px; */
 }
 
 /* Container for the projects */
@@ -581,6 +581,84 @@ h2 {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Pagination styles */
+
+#category-selection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#category-selection button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#category-selection button:hover {
+    background-color: #666666;
+}
+
+#pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10px;
+    position: relative;
+}
+
+#pagination a {
+    text-decoration: none;
+}
+
+#pagination button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: #666666;
+}
+
+#pagination span {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 30px;
+    /* Adjust this if your numbers are wider */
+    text-align: center;
+}
+
+#prevPage {
+    margin-right: auto;
+}
+
+#nextPage {
+
+    margin-left: auto;
+}
+
+#pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .project {
@@ -609,8 +687,11 @@ h2 {
 /*--------------------------------------------------------------------------------------------------------*/
 /*certificates*/
 #certificates-section {
-    padding: 20px;
+    padding: 50px 0;
+    text-align: center;
     background-color: #a9a29c;
+    overflow: hidden;
+    height: max-content;
 }
 
 #certificates-section h2 {
@@ -618,53 +699,98 @@ h2 {
     margin-bottom: 20px;
 }
 
-#certificates-container {
+.certificate-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+
 }
 
-.certificate {
-    border: 1px solid #d5ccc7;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
+#certificate-content {
+    padding: 20px;
     background-color: #d5ccc7;
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
-    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-align: left;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* Adjust transition */
 }
 
-.certificate h3 {
-    text-align: center;
-    margin: 0 0 10px;
+#certificate-content img {
+    margin-left: 52px;
+    max-width: 387px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+
+#certificate-content h3 {
+    color: #333;
     font-size: 1.75em;
-}
-
-.certificate p {
-    text-align: center;
-    color: #333333;
-    font-size: 1em;
-    margin: 5px 0;
-    line-height: 1.6;
     margin-bottom: 10px;
 }
 
-.certificate .description-txt-align p {
-    text-align: left;
-    padding-left: 50px;
-    padding-right: 50px;
+#certificate-content p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.certificate-size {
-    height: 300px;
-    width: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    margin-top: auto;
+.certificate-container button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    /* padding: 10px; */
+    width: 10%;
+    font-size: 3em;
+    height: 100px;
+    border-radius: 25%;
+}
+
+#prevCertificate {
+    left: -60px;
+}
+
+#nextCertificate {
+    right: -60px;
+}
+
+.certificate-container button:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.certificate-container button p:hover {
+    transform: scale(140%);
+    cursor: pointer;
+}
+
+/* Dot navigation styles */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    /* z-index: 10; */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #d5ccc7;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* z-index: 10; */
+}
+
+.dot.active {
+    background-color: #333;
 }
 
 @media (max-width: 768px) {
@@ -674,15 +800,29 @@ h2 {
 
     }
 
-    .certificate .description-txt-align p {
-        text-align: left;
-        padding-left: 5px;
-        padding-right: 5px;
+    .certificate-container button {
+        left: 10px;
+        right: 10px;
+        font-size: 2em;
+        /* padding: 10px; */
+        width: 200px;
+
     }
 
-    .certificate-size {
+    #certificate-content img {
         max-width: 100%;
+        width: 70%;
+        /* border-radius: 8px 8px 0 0; */
     }
+
+    #prevCertificate {
+        left: 10px;
+    }
+
+    #nextCertificate {
+        right: 10px;
+    }
+
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
