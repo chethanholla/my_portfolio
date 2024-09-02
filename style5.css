@@ -783,7 +783,7 @@ h2 {
     .flipbook-page {
         width: 100%;
         /* Make the pages take most of the screen width */
-        height: 300px;
+        /* height: 340px; */
         /* Adjust the height for mobile */
         margin: 15px 0;
         /* Add vertical margin between pages */
