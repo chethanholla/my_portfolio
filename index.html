@@ -168,17 +168,22 @@
     <!--Certificate section-->
     <section id="certificates-section" data-aos="fade-in" data-aos-duration="1500">
         <h2>Certificates</h2>
-        <div class="certificate-container">
-            <button id="pervCertificate" onclick="prevCertificate()">
+        <div class="flipbook-container">
+            <button id="prevCertificate" onclick="prevCertificate()">
                 <p>&#8249;</p>
             </button>
-            <div id="certificate-content"></div>
+            <!-- Flipbook Content -->
+            <div id="flipbook-content">
+                <div class="flipbook-page" id="left-page"></div>
+                <div class="flipbook-page" id="right-page"></div>
+            </div>
             <button id="nextCertificate" onclick="nextCertificate()">
                 <p>&#8250;</p>
             </button>
         </div>
         <div id="dots-container" class="dots-container"></div>
     </section>
+
 
     <!--Contact Form-->
     <section id="contact" data-aos="zoom-out" data-aos-duration="1500">

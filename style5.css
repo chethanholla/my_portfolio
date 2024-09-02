@@ -685,7 +685,7 @@ h2 {
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
-/*certificates*/
+/* Certificates Section */
 #certificates-section {
     padding: 50px 0;
     text-align: center;
@@ -694,78 +694,55 @@ h2 {
     height: max-content;
 }
 
-#certificates-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.certificate-container {
+.flipbook-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
-
 }
 
-#certificate-content {
+#flipbook-content {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    perspective: 1500px;
+}
+
+.flipbook-page {
+    width: 420px;
+    height: 330px;
     padding: 20px;
     background-color: #d5ccc7;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    text-align: left;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    /* Adjust transition */
+    border-radius: 10px;
+    margin: 0 15px;
+    transition: transform 0.5s ease;
 }
 
-#certificate-content img {
-    margin-left: 52px;
-    max-width: 387px;
+.flipbook-page img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    margin-bottom: 20px;
-
-}
-
-#certificate-content h3 {
-    color: #333;
-    font-size: 1.75em;
-    margin-bottom: 10px;
-}
-
-#certificate-content p {
-    color: #666;
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.certificate-container button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    /* padding: 10px; */
-    width: 10%;
-    font-size: 3em;
-    height: 100px;
-    border-radius: 25%;
-}
-
-#prevCertificate {
-    left: -60px;
-}
-
-#nextCertificate {
-    right: -60px;
-}
-
-.certificate-container button:hover {
-    background-color: #666;
     cursor: pointer;
 }
 
-.certificate-container button p:hover {
-    transform: scale(140%);
+#left-page {
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.flipbook-container button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    border-radius: 25%;
+}
+
+.flipbook-container button p {
     cursor: pointer;
 }
 
@@ -774,7 +751,6 @@ h2 {
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    /* z-index: 10; */
 }
 
 .dot {
@@ -786,57 +762,76 @@ h2 {
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s;
-    /* z-index: 10; */
 }
 
 .dot.active {
     background-color: #333;
 }
 
-@media (max-width: 768px) {
-    .certificate {
-        flex: 1 1 100%;
-        max-width: 100%;
-
+@media(max-width: 768px) {
+    #flipbook-content {
+        width: 100%;
+        /* Make the container take the full width */
+        flex-direction: column;
+        /* Stack pages vertically */
+        align-items: center;
+        /* Center align for better visibility */
+        perspective: 1200px;
+        /* Adjust perspective for smaller screens */
     }
 
-    .certificate-container button {
-        left: 10px;
-        right: 10px;
+    .flipbook-page {
+        width: 100%;
+        /* Make the pages take most of the screen width */
+        /* height: 340px; */
+        /* Adjust the height for mobile */
+        margin: 15px 0;
+        /* Add vertical margin between pages */
+        padding: 15px;
+        /* Reduce padding to fit smaller screens */
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        /* Slightly reduce shadow */
+    }
+
+    .flipbook-page h3 {
+        font-size: 1.9em;
+    }
+
+    .flipbook-page p {
+        font-size: 1.2em;
+    }
+
+    .flipbook-container button {
         font-size: 2em;
-        /* padding: 10px; */
-        width: 200px;
-
+        /* Decrease button size */
+        padding: 5px 15px;
+        /* Add padding for better tap targets */
     }
 
-    #certificate-content img {
-        max-width: 100%;
-        width: 60%
-            /* border-radius: 8px 8px 0 0; */
-    }
-
-    #certificate-content h3 {
-        color: #333;
+    .flipbook-container button p {
         font-size: 1.5em;
-        margin-bottom: 10px;
+        /* Reduce font size in buttons */
     }
 
-    #certificate-content p {
-        color: #666;
-        font-size: 0.9em;
-        line-height: 1.1;
-        margin-bottom: 10px;
+    #left-page {
+        font-size: 1em;
+        /* Adjust font size for smaller screens */
+        text-align: center;
+        /* Center text on smaller screens */
     }
 
-    #prevCertificate {
-        left: 10px;
+    .dots-container {
+        margin-top: 20px;
     }
 
-    #nextCertificate {
-        right: 10px;
+    .dot {
+        height: 10px;
+        /* Slightly reduce dot size */
+        width: 10px;
+        margin: 0 4px;
     }
-
 }
+
 
 /*--------------------------------------------------------------------------------------------------------*/
 /* Contact */

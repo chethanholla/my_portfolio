@@ -297,7 +297,114 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('pagination').style.display = 'none'; // Hide pagination initially
 });
 //--------------------------------------------------------------------------------------------
-//Dynamically adding Certificates
+// //Dynamically adding Certificates
+// let currentCertificateIndex = 0;
+// let certificates = [];
+
+// function loadCertificates() {
+//     fetch('data.json')
+//         .then(response => response.json())
+//         .then(data => {
+//             certificates = data.certificates;
+//             displayCertificate();
+//             createDots();
+//         });
+// }
+
+// function displayCertificate() {
+//     const certificate = certificates[currentCertificateIndex];
+//     const certificateContent = document.getElementById('certificate-content');
+
+//     certificateContent.style.opacity = 0; // Start by hiding the certificate
+//     certificateContent.style.transform = 'translateX(0)'; // Reset position
+//     setTimeout(() => {
+//         certificateContent.innerHTML = `
+//             <img id="certificate-image" src="${certificate.image}" alt="${certificate.title}">
+//             <h3>${certificate.title}</h3>
+//             <p><strong>Issuer:</strong> ${certificate.issuer}</p>
+//             <p><strong>Date:</strong> ${certificate.date}</p>
+//             <p>${certificate.description}</p>
+//         `;
+//         certificateContent.style.opacity = 1; // Fade in the new certificate
+
+//         // Add click event listener for enlarging the image
+//         const certificateImage = document.getElementById('certificate-image');
+//         certificateImage.addEventListener('click', () => {
+//             const certificatesSection = document.getElementById('certificates-section');
+//             certificatesSection.classList.toggle('enlarged');
+//         });
+
+//     }, 100); // Delay matches the transition duration
+//     updateDots();
+// }
+
+// function createDots() {
+//     const dotsContainer = document.getElementById('dots-container');
+//     dotsContainer.innerHTML = ''; // Clear any existing dots
+
+//     for (let i = 0; i < certificates.length; i++) {
+//         const dot = document.createElement('span');
+//         dot.classList.add('dot');
+//         dot.setAttribute('data-index', i);
+//         dot.onclick = function () {
+//             currentCertificateIndex = i;
+//             displayCertificate();
+//         };
+//         dotsContainer.appendChild(dot);
+//     }
+//     updateDots();
+// }
+
+// function updateDots() {
+//     const dots = document.querySelectorAll('.dot');
+//     dots.forEach((dot, index) => {
+//         if (index === currentCertificateIndex) {
+//             dot.classList.add('active');
+//         } else {
+//             dot.classList.remove('active');
+//         }
+//     });
+// }
+
+// function prevCertificate() {
+//     animateCertificateOut('left'); // Slide out to the left
+
+//     if (certificates.length === 0) return;
+//     currentCertificateIndex = (currentCertificateIndex === 0) ? certificates.length - 1 : currentCertificateIndex - 1;
+//     setTimeout(() => {
+//         animateCertificateIn('left'); // Slide in from the left
+//         displayCertificate();
+//     }, 500); // Match delay with the transition
+// }
+
+// function nextCertificate() {
+//     animateCertificateOut('right'); // Slide out to the right
+
+//     if (certificates.length === 0) return;
+//     currentCertificateIndex = (currentCertificateIndex === certificates.length - 1) ? 0 : currentCertificateIndex + 1;
+//     setTimeout(() => {
+//         animateCertificateIn('right'); // Slide in from the right
+//         displayCertificate();
+//     }, 500); // Match delay with the transition
+// }
+
+// function animateCertificateOut(direction) {
+//     const certificateContent = document.getElementById('certificate-content');
+//     certificateContent.style.transform = direction === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
+//     certificateContent.style.opacity = 0;
+// }
+
+// function animateCertificateIn(direction) {
+//     const certificateContent = document.getElementById('certificate-content');
+//     certificateContent.style.transform = direction === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+//     setTimeout(() => {
+//         certificateContent.style.transform = 'translateX(0)';
+//         certificateContent.style.opacity = 1;
+//     }, 10); // Quick reset for smooth transition
+// }
+
+// document.addEventListener('DOMContentLoaded', loadCertificates);
+
 let currentCertificateIndex = 0;
 let certificates = [];
 
@@ -312,29 +419,25 @@ function loadCertificates() {
 }
 
 function displayCertificate() {
+    if (certificates.length === 0) return;
+
     const certificate = certificates[currentCertificateIndex];
-    const certificateContent = document.getElementById('certificate-content');
+    const leftPage = document.getElementById('left-page');
+    const rightPage = document.getElementById('right-page');
 
-    certificateContent.style.opacity = 0; // Start by hiding the certificate
-    certificateContent.style.transform = 'translateX(0)'; // Reset position
-    setTimeout(() => {
-        certificateContent.innerHTML = `
-            <img id="certificate-image" src="${certificate.image}" alt="${certificate.title}">
-            <h3>${certificate.title}</h3>
-            <p><strong>Issuer:</strong> ${certificate.issuer}</p>
-            <p><strong>Date:</strong> ${certificate.date}</p>
-            <p>${certificate.description}</p>
-        `;
-        certificateContent.style.opacity = 1; // Fade in the new certificate
+    // Fill Left Page with Details
+    leftPage.innerHTML = `
+        <h3>${certificate.title}</h3>
+        <p><strong>Issuer:</strong> ${certificate.issuer}</p>
+        <p><strong>Date:</strong> ${certificate.date}</p>
+        <p>${certificate.description}</p>
+    `;
 
-        // Add click event listener for enlarging the image
-        const certificateImage = document.getElementById('certificate-image');
-        certificateImage.addEventListener('click', () => {
-            const certificatesSection = document.getElementById('certificates-section');
-            certificatesSection.classList.toggle('enlarged');
-        });
+    // Fill Right Page with Image
+    rightPage.innerHTML = `
+        <img src="${certificate.image}" alt="${certificate.title}" onclick="enlargeImage('${certificate.image}')">
+    `;
 
-    }, 100); // Delay matches the transition duration
     updateDots();
 }
 
@@ -367,40 +470,21 @@ function updateDots() {
 }
 
 function prevCertificate() {
-    animateCertificateOut('left'); // Slide out to the left
-
     if (certificates.length === 0) return;
     currentCertificateIndex = (currentCertificateIndex === 0) ? certificates.length - 1 : currentCertificateIndex - 1;
-    setTimeout(() => {
-        animateCertificateIn('left'); // Slide in from the left
-        displayCertificate();
-    }, 500); // Match delay with the transition
+    displayCertificate();
 }
 
 function nextCertificate() {
-    animateCertificateOut('right'); // Slide out to the right
-
     if (certificates.length === 0) return;
     currentCertificateIndex = (currentCertificateIndex === certificates.length - 1) ? 0 : currentCertificateIndex + 1;
-    setTimeout(() => {
-        animateCertificateIn('right'); // Slide in from the right
-        displayCertificate();
-    }, 500); // Match delay with the transition
+    displayCertificate();
 }
 
-function animateCertificateOut(direction) {
-    const certificateContent = document.getElementById('certificate-content');
-    certificateContent.style.transform = direction === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
-    certificateContent.style.opacity = 0;
-}
-
-function animateCertificateIn(direction) {
-    const certificateContent = document.getElementById('certificate-content');
-    certificateContent.style.transform = direction === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
-    setTimeout(() => {
-        certificateContent.style.transform = 'translateX(0)';
-        certificateContent.style.opacity = 1;
-    }, 10); // Quick reset for smooth transition
+// Function to enlarge image on click
+function enlargeImage(imageSrc) {
+    const imageWindow = window.open("", "Image", "width=600,height=450");
+    imageWindow.document.write(`<img src='${imageSrc}' style='width: 100%;'>`);
 }
 
 document.addEventListener('DOMContentLoaded', loadCertificates);
