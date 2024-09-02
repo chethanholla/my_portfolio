@@ -121,13 +121,28 @@ body.dark-mode .certificate .description-txt-align p {
 }
 
 body.dark-mode #contact {
-    background: #1e1e1e;
     color: #ddd;
 }
 
 body.dark-mode #contact-form input,
 body.dark-mode #contact-form textarea {
     background: #ddd;
+}
+
+body.dark-mode #pagination span {
+    color: #777777;
+}
+
+body.dark-mode #certificates-section h3 {
+    color: #ddd;
+}
+
+body.dark-mode .flipbook-page {
+    background: #555;
+}
+
+body.dark-mode .dot.active {
+    background: #333;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
