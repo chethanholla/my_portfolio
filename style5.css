@@ -989,6 +989,38 @@ footer .socials a:hover {
     animation-play-state: paused;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #back-to-top {
+        width: 60px;
+        /* Smaller width */
+        height: 60px;
+        /* Smaller height */
+        bottom: 15px;
+        /* Adjust bottom positioning */
+        right: 15px;
+        /* Adjust right positioning */
+
+
+    }
+
+    #back-to-top svg {
+        width: 100%;
+        /* Slightly smaller size for the arrow */
+        height: 100%;
+    }
+
+    .face {
+        fill: #28262b;
+        stroke: #d5ccc7;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        stroke-width: 3;
+        transform-origin: center;
+        transform-style: preserve-3d;
+    }
+}
+
 /*--------------------------------------------------------------------------------------------------------*/
 /* Responsive Design */
 @media(max-width: 768px) {
