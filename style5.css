@@ -926,18 +926,67 @@ footer .socials a:hover {
     bottom: 20px;
     right: 20px;
     display: none;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
+    /* Initially hidden */
+    background: none;
+    /* No background for the button */
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
-    transition: background 0.3s;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
 }
 
-#back-to-top:hover {
-    background: #555;
+#cube {
+    will-change: transform;
+    /* Hint browser for optimization */
+    transform-style: preserve-3d;
+    transform-origin: center;
+    animation: rotateCube 4s infinite;
+    /* Play an animation with the same speed from beginning to end:use linear in animation */
+}
+
+/* Style the arrow */
+.arrow {
+    fill: #fff;
+    font-size: 36px;
+    /* Adjust size as needed */
+    font-family: Arial, sans-serif;
+    /* Ensure proper font rendering */
+}
+
+.face {
+    fill: #28262b;
+    stroke: #d5ccc7;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 3;
+    transform-origin: center;
+    transform-style: preserve-3d;
+}
+
+/* Position face of the cube */
+.square {
+    transform: translateZ(30px);
+}
+
+/* Animation to rotate the cube */
+@keyframes rotateCube {
+    from {
+        transform: rotateX(0) rotateY(0);
+        /* Start at 0 rotation */
+    }
+
+    to {
+        transform: rotateX(0deg) rotateY(360deg);
+        /* Full rotation */
+    }
+}
+
+/* Pause the animation when hovering */
+#back-to-top:hover #cube {
+    animation-play-state: paused;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
