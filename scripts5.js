@@ -167,6 +167,7 @@ function showCategory(category) {
     loadProjects();
 }
 
+
 function updateHeading() {
     const heading = document.getElementById('category-heading');
     if (currentCategory === 'work') {
@@ -246,7 +247,33 @@ function nextPage() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const projectContainer = document.getElementById('project-container');
+
+    const categorySelectionButtons = document.querySelectorAll('#category-selection button');
+    const pagination = document.getElementById('pagination');
+    const projectsSection = document.getElementById('projects');
+
     document.getElementById('pagination').style.display = 'none'; // Hide pagination initially
+
+    //Scroll event listener to detect when scrolling out of the project section
+    window.addEventListener('scroll', () => {
+        const sectionTop = projectsSection.offsetTop;
+        const sectionHeight = projectsSection.offsetHeight;
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        if (scrollY + windowHeight < sectionTop || scrollY > sectionTop + sectionHeight) {
+            resetProjectSection();
+        }
+    });
+
+    function resetProjectSection() {
+        projectContainer.innerHTML = '';
+        categorySelectionButtons.forEach(button => button.classList.remove('small'));
+        pagination.style.display = 'none';
+        currentPage = 1;
+        filteredProjects = [];
+        document.getElementById('category-heading').textContent = 'Projects';
+    }
 });
 //--------------------------------------------------------------------------------------------
 // Dynamically adding Certificates

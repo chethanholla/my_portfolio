@@ -536,6 +536,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 20px;
 }
 
 /* Styles for individual projects */
@@ -604,19 +605,67 @@ h2 {
     padding: 20px;
 }
 
+
 #category-selection button {
     background-color: #333333;
     color: white;
+    text-decoration: solid;
     border: none;
-    padding: 10px 20px;
+    padding: 50px 50px;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
     transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+#category-selection button.small {
+    padding: 20px 20px;
+    /* Adjust to smaller size */
+    font-size: 0.9em;
+    /* Optional: reduce font size */
+    transition: all 0.3s ease;
+}
+
+#category-selection #workCategory::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/Professional.JPG') no-repeat center center/cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+#category-selection #workCategory:hover::before {
+    opacity: 0.3;
+}
+
+#category-selection #collegeCategory::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/Personal.jpg') no-repeat center center/cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+#category-selection #collegeCategory:hover::before {
+    opacity: 0.3;
 }
 
 #category-selection button:hover {
-    background-color: #666666;
+    transform: scale(0.9);
+    behavior: 'smooth';
 }
 
 #pagination {
