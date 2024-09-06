@@ -726,11 +726,13 @@ h2 {
 @media (max-width: 768px) {
     .project {
         flex-direction: column;
+        align-items: center;
     }
 
     .project img {
-        max-width: 100%;
+        max-width: 100px;
         width: 100%;
+        padding: 10px;
         border-radius: 8px 8px 0 0;
     }
 
