@@ -552,8 +552,8 @@ h2 {
 }
 
 .project img {
-    width: 15%;
-    max-width: 400px;
+    width: auto;
+    max-width: 150px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -755,6 +755,7 @@ h2 {
     background-color: #a9a29c;
     overflow: hidden;
     height: max-content;
+    behavior: "smooth";
 }
 
 .flipbook-container {
@@ -1111,3 +1112,5 @@ footer .socials a:hover {
         flex: 1 1 100%;
     }
 }
+
+/* --------------------------------------------------------------------------------------------------- */

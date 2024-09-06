@@ -360,3 +360,4 @@ function enlargeImage(imageSrc) {
 }
 
 document.addEventListener('DOMContentLoaded', loadCertificates);
+// ---------------------------------------------------------------------------------------------------
