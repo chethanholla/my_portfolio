@@ -285,7 +285,7 @@ nav ul li a:hover {
     display: none !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
     .bar .bar-item.hover-black {
         display: block !important;
     }
@@ -503,7 +503,7 @@ h2 {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
     .skill h3 {
         font-size: 1.2em;
     }
@@ -723,7 +723,7 @@ h2 {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
     .project {
         flex-direction: column;
         align-items: center;
@@ -834,7 +834,7 @@ h2 {
     background-color: #333;
 }
 
-@media(max-width: 768px) {
+@media(min-width: 480px) and (max-width: 768px) {
     #flipbook-content {
         width: 100%;
         /* Make the container take the full width */
@@ -1041,7 +1041,7 @@ footer .socials a:hover {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
     #back-to-top {
         width: 60px;
         /* Smaller width */
@@ -1074,7 +1074,7 @@ footer .socials a:hover {
 
 /*--------------------------------------------------------------------------------------------------------*/
 /* Responsive Design */
-@media(max-width: 768px) {
+@media(min-width: 480px) and (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
     }
