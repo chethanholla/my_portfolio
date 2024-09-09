@@ -273,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPage = 1;
         filteredProjects = [];
         document.getElementById('category-heading').textContent = 'Projects';
+        loadCertificates();
     }
 });
 //--------------------------------------------------------------------------------------------
