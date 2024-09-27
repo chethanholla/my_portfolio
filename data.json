@@ -1,22 +1,22 @@
 {
     "technicalSkills": [
         {
-            "name": "C/C++, OOPS ,Python ",
-            "icon": "fas fa-code",
-            "level": 70
-        },
-        {
-            "name": "Full Stack Web Development - Java, HTML5, CSS5, JS5 , SpringBoot, Angular",
+            "name": "HTML, CSS, JavaScript, Java",
             "icon": "fas fa-code",
             "level": 80
         },
         {
-            "name": "Microsoft Office - Exccel, Powerpoint, Word",
-            "icon": "fas fa-laptop-code",
-            "level": 90
+            "name": "Full Stack Web Development - Advance Java, SpringBoot, Angular, MySQL",
+            "icon": "fas fa-code",
+            "level": 70
         },
         {
-            "name": "Database Management System - MySql",
+            "name": "Microsoft Office - Exccel, Powerpoint, Word",
+            "icon": "fas fa-laptop-code",
+            "level": 70
+        },
+        {
+            "name": "Database Management System",
             "icon": "fas fa-database",
             "level": 80
         }
